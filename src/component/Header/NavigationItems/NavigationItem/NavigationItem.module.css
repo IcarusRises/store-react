@@ -1,0 +1,19 @@
+.NavigationItem {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.NavigationItem ul li {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    color: #40A4C8;
+}
