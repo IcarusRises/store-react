@@ -4,10 +4,11 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 import styles from './NavigationItems.module.css';
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 const navigationItems = () => (
     <ul className={styles.NavigationItems}>
-        <NavigationItem link='/'>Home</NavigationItem>
-        <NavigationItem link='/cart'>Cart</NavigationItem>
+        <NavigationItem link='/cart'><FontAwesomeIcon icon="shopping-cart"/></NavigationItem>
     </ul>
 )
 

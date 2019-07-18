@@ -1,27 +1,10 @@
-.Toolbar {
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: blue;
+.Toolbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 90;
-}
-
-.Toolbar ul {
-    display: flex;
-}
-
-.Toolbar li {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.Toolbar nav {
-    height: 100%;
+    justify-self: center;
+    background-color: #1d2732;
+    top: 0px;
+    height: 70px;
+    border-bottom: 1px solid #000;
 }

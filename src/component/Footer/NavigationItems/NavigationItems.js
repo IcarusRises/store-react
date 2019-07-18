@@ -1,9 +1,10 @@
 import React from 'react';
 
-import NavigationItem from './NavigationItem/NavigationItem';
+import NavigationItem from '../../NavigationItems/NavigationItem/NavigationItem';
 
-const navigationItems = () => (
+const navigationItems = (props) => (
     <ul>
+        <li>{props.name}</li>
         <NavigationItem link='/'>Home</NavigationItem>
         <NavigationItem link='Contact'>Contact Us</NavigationItem>
     </ul>

@@ -1,8 +1,31 @@
-.footer {
-    position: fixed;
-    left: 0;
+.Footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: darkgray;
+    height: var(--footer-height);
+    background-color: var(--footer-bg);
+}
+
+.Box {
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 40px;
+}
+
+.Box ul li {
+    list-style: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.Box ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.BottomText {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
     text-align: center;
 }

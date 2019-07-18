@@ -1,13 +1,19 @@
 import React from 'react';
-import NavigationItems from '../Footer/NavigationItems/NavigationItems';
+
+import NavigationItems from './NavigationItems/NavigationItems';
+import SignUp from './SignUp/Signup';
 
 import styles from './Footer.module.css';
 
 const footer = () => (
-    <footer>
-        <div className={styles.footer}>
-            <NavigationItems/>
+    <footer className={styles.Footer}>
+        <div className={styles.Box}>
+            <SignUp/>
+            <NavigationItems name={'Menu'}/>
         </div>
+        <p className={styles.BottomText}>
+            &copy; 2018 Billie Tran Webdesign
+        </p>
     </footer>
 )
 

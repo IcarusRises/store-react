@@ -1,14 +1,16 @@
 import React from 'react';
 
+import styles from './Searchbar.module.css';
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 const searchbar = () => (
-    <div>
+    <div className={styles.Searchbar}>
         <form action="#">
-            <input type="text" name="search"/>
-            <div>
-                <button>
-                    Submit
-                </button>
-            </div>
+            <input type="text" name="search" placeholder="Search Laptops and Deals"/>
+            <button>
+                <FontAwesomeIcon icon="search"/>
+            </button>
         </form>
     </div>
 )
