@@ -1,0 +1,18 @@
+.Sidebar {
+    padding: 50px 115px 0 115px;
+    left: 0;
+    top: 65px;
+    list-style: none;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: var(--blue-transparent);
+}
+
+.Sidebar li a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.Sidebar li a:hover {
+    background-color: var(--blue);
+}
