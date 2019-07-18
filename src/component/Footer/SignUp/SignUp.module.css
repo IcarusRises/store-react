@@ -1,0 +1,37 @@
+.SignupContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    color: white;
+}
+
+.SignUp form input {
+    margin-bottom: .6rem;
+    width: 25rem;   
+    height: 36px;
+    border: none;
+    border-right: none;
+    padding: 5px;
+    outline: none;
+}
+
+.SignUp form input:focus {
+    color: var(--dark-grey);
+}
+
+.SignUp form button {
+    width: 100px;
+    height: 36px;
+    border: 1px solid var(--dark-grey);
+    background: var(--blue);
+    text-align: center;
+    color:white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
