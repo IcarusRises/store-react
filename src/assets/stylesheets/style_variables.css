@@ -1,0 +1,16 @@
+:root {
+    --bg: #F8f8f8;
+    --blue: rgb(22, 13, 252);
+    --light-blue: #5853FF;
+    --blue-transparent: rgba(88,83,255,.8);
+    --dark-grey: #161e26;
+
+    /* Card */
+    --card-bg: #fff;
+    --card-secondary-bg: #F8F8F8;
+    --card-btn-primary: #00b4cc;
+
+    /* Footer  */
+    --footer-height: 230px;
+    --footer-bg: #181818;
+}
