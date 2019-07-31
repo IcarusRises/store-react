@@ -1,39 +1,48 @@
 import React, {Component} from 'react';
-
-import Faker from 'faker';
+import axios from 'axios';
 
 import Cards from '../../component/Cards/Cards';
 
 class CardGenerator extends Component {
     state = {
-        laptops: []
+        laptops: [],
+        test: null
     }
 
-    componentDidMount() {
-        for(let i = 0; i < 20; i++){
-            let laptop = {
-                image: Faker.image.technics(),
-                name: Faker.commerce.productName(),
-                price: '$' + Faker.commerce.price()
-            }
-            this.setState(prevState => ({
-                laptops: [...prevState.laptops, laptop]
-            }));
+    componentDidMount() { 
+        axios.get('http://localhost:3001/laptops/')
+            .then(res => {
+                let laptop = res.data;
+                console.log('222', laptop);
+                this.setState(prevState => ({
+                    laptops: res.data
+                }))
+
+                this.setState({test: laptop})
+            })
+            .catch(err => console.log('Error: ' + err))
+
+            
         }
-    }
+    
+        
 
     renderLaptops = (laptop) => {
         return (
             <Cards
-                image={laptop.image}
-                name={laptop.name}
-                price={laptop.price}/>
+               
+                />
+
         )
     }
 
     render(){
-        return this.state.laptops.map(laptop => this.renderLaptops(laptop));
+        console.log("testtt", this.state.test)
+        console.log("laptops", this.state.laptops[0])
+                // return this.state.laptops.map(laptop => this.renderLaptops(laptop));
+        return this.renderLaptops()
     }
 }
+
 
 export default CardGenerator;
