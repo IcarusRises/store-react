@@ -4,15 +4,15 @@ import Toolbar from './component/Header/Toolbar/Toolbar';
 import Footer from './component/Footer/Footer';
 import Background from './component/BackgroundContainer/Background';
 import Store from './component/Store/Store';
-import LaptopForm from './container/LaptopForm/LaptopForm';
+import LaptopForm from './container/Form/LaptopForm';
 
 import styles from './App.module.css';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faShoppingCart, faSearch, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faShoppingCart, faSearch, faEnvelope, faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faShoppingCart, faSearch, faEnvelope);
+library.add(faShoppingCart, faSearch, faEnvelope, faPlus, faMinus);
 
 function App() {
 
