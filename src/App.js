@@ -1,5 +1,7 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
 
+import Page from './container/Page/Page';
 import Toolbar from './component/Header/Toolbar/Toolbar';
 import Footer from './component/Footer/Footer';
 import Background from './component/BackgroundContainer/Background';
@@ -17,13 +19,11 @@ library.add(faShoppingCart, faSearch, faEnvelope, faPlus, faMinus);
 function App() {
 
   return (
-    <div className={styles.Container}>
-      <Toolbar/>
-        <LaptopForm/>
-        <Background/>
-        <Store/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className={styles.Container}>
+        <Page/>
+      </div>
+    </BrowserRouter>
   );
 }
 
