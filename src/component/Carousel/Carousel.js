@@ -6,7 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './Carousel.module.css';
 
 const carousel = (props) => (
-    <div className={styles.Container}>
+    <div>
         <Carousel showThumbs={props.boolean} useKeyboardArrows>
             <div>
                 <img src={props.mainImage}alt='1'/>
