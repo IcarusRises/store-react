@@ -24,13 +24,20 @@ class CardGenerator extends Component {
     renderLaptops = (laptop) => {
         return (
             <Cards
+                id={laptop._id}
                 brand={laptop.brand}
+                name={laptop.name}
+                image={laptop.image}
+                original={laptop.original}
+                savings={laptop.savings}
+                price={laptop.price}
+                key={laptop._id}
                 />
-
         )
     }
 
     render(){
+        this.state.laptops.map(laptop => console.log(laptop._id))
         return this.state.laptops.map(laptop => this.renderLaptops(laptop));
     }
 }
