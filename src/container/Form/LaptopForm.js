@@ -6,6 +6,11 @@ class LaptopForm extends Component{
     state={
         laptop: {
             brand: "",
+            name: "",
+            image: "",
+            original: "",
+            savings: "",
+            price: ""
         }    
     }
 
