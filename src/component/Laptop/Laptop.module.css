@@ -1,0 +1,139 @@
+.container{
+    height: 100vh;
+    padding: 50px;
+    background-color: white;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.center{
+    justify-content: space-around;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.laptop{
+    width: 20%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.box{
+    padding: 5px;
+    background-color: var(--light-grey);
+    width: 30%;
+    height: 260px;
+    border: 1px solid var(--dark-grey);
+    list-style: none;
+}
+
+.box_sold{
+    background-color: white;
+    color: grey;
+    padding: 20px;
+    margin-bottom: 1px;
+}
+
+.box_sold span{
+    color: black;
+    font-weight: 600;
+    
+}
+
+.box_list{
+    list-style: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.box_original{
+    font-size: .8rem;
+}
+
+.box_original span{
+    text-decoration: line-through;
+}
+
+.box_savings{
+    width: 30%;
+    margin: .3rem 0;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+}
+
+.box_price{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.button_pointer{
+    cursor: pointer;
+}
+
+.button_cart{
+    background-color: var(--light-blue);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;    
+}
+
+.button_cart:hover{
+    background-color: var(--blue);
+}
+
+.box_buttons_container{
+    background-color: white;
+    margin-top: 1px;
+    padding: 10px;
+}
+
+.box_buttons_inline{
+    display: inline;
+}
+
+.number{
+    padding: 5px 10px;
+    width: 15%;
+    height: 48px;
+    border-radius: 0;
+    border: 1px solid grey;
+}
+
+.number_button_add{
+    margin-right: 10px;
+    width: 15%;
+    height: 48px;
+    border: none;
+}
+
+.number_button_subtract{
+    width: 15%;
+    height: 48px;
+    border: none;
+}
+
+.box_buttons_inline input::-webkit-outer-spin-button,
+.box_buttons_inline input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.box_buttons_inline input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.button_collapse{
+    width: 700px;
+    padding: 20px;
+}
