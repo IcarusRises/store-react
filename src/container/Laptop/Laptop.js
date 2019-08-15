@@ -43,7 +43,7 @@ class Laptop extends Component{
         return(
             <div className={styles.container}>
                 <ul>
-                    <BreadCrumbs array={links}/>
+                    <BreadCrumbs links={links}/>
                 </ul>
                 <div className={`${styles.row} ${styles.center}`}>
                     <div className={styles.column}>
