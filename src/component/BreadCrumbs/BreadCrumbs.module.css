@@ -1,0 +1,17 @@
+.breadCrumbs {
+    margin-bottom: 3rem;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: var(--light-grey); 
+}
+
+.breadCrumbs li{
+    display: inline;
+    font-size: 1.1rem;
+}
+
+.breadCrumbs li+li:before{
+    padding: 8px;
+    color: black;
+    content: '/\00a0';
+}
