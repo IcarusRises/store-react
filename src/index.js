@@ -2,17 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import reduxThunk from 'redux-thunk';
-import reducers from './store/reducers';
+
+import {store} from './store/store';
 
 import 'normalize.css';
 import './assets/stylesheets/style_variables.css';
-
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { startListeningToAuthChanges } from './store/actions';
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+store.dispatch(startListeningToAuthChanges())
 
 ReactDOM.render(
     <Provider store={store}>
