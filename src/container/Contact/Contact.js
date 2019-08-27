@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import axios from 'axios';
+
+import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
 
 class Contact extends Component{
 
@@ -34,23 +36,31 @@ class Contact extends Component{
 
         
 
-    render(){
+    render(
+        links=[
+            {to: '/', label: 'Home'},
+            {to:'/contact', label: 'Contact'},
+        ]
+    ){
         return(
-            <form onSubmit={this.handleSubmit.bind(this)} action="POST">
-                <div>
-                    <label htmlFor="">Name</label>
-                    <input type="text" id="name"/>
-                </div>
-                <div>
-                    <label htmlFor="">Name</label>
-                    <input type="text" id="email"/>
-                </div>
-                <div>
-                    <label htmlFor="">Name</label>
-                    <textarea type="text" id="message"/>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <Fragment>
+                <BreadCrumbs links={links}/>
+                <form onSubmit={this.handleSubmit.bind(this)} action="POST">
+                    <div>
+                        <label htmlFor="">Name</label>
+                        <input type="text" id="name"/>
+                    </div>
+                    <div>
+                        <label htmlFor="">Name</label>
+                        <input type="text" id="email"/>
+                    </div>
+                    <div>
+                        <label htmlFor="">Name</label>
+                        <textarea type="text" id="message"/>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </Fragment>
         )
     }
 }
