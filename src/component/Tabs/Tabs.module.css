@@ -1,0 +1,43 @@
+.tabs_container{
+   margin-bottom: 2rem; 
+   width: 88.8vw;
+   overflow: hidden;
+   background-color: white;
+   font-size: 1.1rem;
+   line-height: 1.6rem;
+}
+
+.tabs{
+    margin-right: 1px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--dark-grey);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: .3s;
+}
+
+.tabs:hover{
+    background-color: var(--light-blue);
+}
+
+/* This isn't working, how can I fix the active class? */
+.tabs:active{
+    background-color: var(--light-blue);
+    
+}
+
+.tabscontent{
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--dark-grey);
+}
+
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
