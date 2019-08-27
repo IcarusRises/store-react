@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 import * as firebaseui from 'firebaseui';
 
 const firebaseConfig = {
@@ -21,13 +21,17 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const ui = new firebaseui.auth.AuthUI(firebase.auth());
+const fireAuth = firebase.auth();
+const ui = new firebaseui.auth.AuthUI(fireAuth);
 
 const startFirebaseUI = function (elementId){
     ui.start(elementId, uiConfig)
 }
 
-export default startFirebaseUI;
+export {
+    fireAuth,
+    startFirebaseUI,
+}
 
 
 
