@@ -37,14 +37,12 @@ class Laptop extends Component{
         links=[
             {to: '/', label: 'Home'},
             {to:'/laptops', label: 'Laptops'},
-            {to: `/laptops/${laptop._id}`, label: `${laptop.name}`}
+            {to: `/laptops/${laptop._id}`, label: `${laptop.brand} ${laptop.name}`}
         ]
     ){  
         return(
             <div className={styles.container}>
-                <ul>
-                    <BreadCrumbs links={links}/>
-                </ul>
+                <BreadCrumbs links={links}/>
                 <div className={`${styles.row} ${styles.center}`}>
                     <div className={styles.column}>
                         <div className={styles.carousel}>
