@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import startFirebaseUI from '../../Firebase/Firebase';
+import {startFirebaseUI} from '../../Firebase/Firebase';
 
 class SignIn extends Component {
 
