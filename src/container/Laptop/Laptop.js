@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
 
+import Carousel from '../../component/Carousel/Carousel'
 import TabsNav from '../../component/Tabs/TabsNav';
-import Carousel from '../../component/Carousel/Carousel';
-import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import styles from './Laptop.module.css';
@@ -11,12 +10,7 @@ import styles from './Laptop.module.css';
 class Laptop extends Component{
 
     state = {
-        laptop: {},
-        quantity: 1,
-    }
-
-    quantityHandler = () => {
-        
+        laptop: {}
     }
 
     componentDidMount(){
@@ -30,20 +24,11 @@ class Laptop extends Component{
         .catch(err => console.log('Error: ' + err))
     }
 
-    
-
-    render(
-        laptop = this.state.laptop,
-        links=[
-            {to: '/', label: 'Home'},
-            {to:'/laptops', label: 'Laptops'},
-            {to: `/laptops/${laptop._id}`, label: `${laptop.brand} ${laptop.name}`}
-        ]
-    ){  
+    render(){
+        console.log(this.state.laptop)
         return(
             <div className={styles.container}>
-                <BreadCrumbs links={links}/>
-                <div className={`${styles.row} ${styles.center}`}>
+                <div className={styles.row}>
                     <div className={styles.column}>
                         <div className={styles.carousel}>
                             <Carousel
@@ -81,7 +66,7 @@ class Laptop extends Component{
                                     <FontAwesomeIcon icon="minus" />
                                 </button>
                                 <div className={styles.box_buttons_inline}>
-                                    <input type="number" className={styles.number} value={this.state.quantity}/>
+                                    <input type="number" className={styles.number}/>
                                 </div>
                                 <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_add}`}>
                                     <FontAwesomeIcon icon="plus" />
@@ -93,11 +78,10 @@ class Laptop extends Component{
                         </div>
                     </div>
                 </div>
-                <div className={`${styles.row} ${styles.center}`}>
+                <div className={styles.row}>
                     <div className={styles.column}>
                         <TabsNav/>
                     </div>
-
                 </div>
             </div>
         );

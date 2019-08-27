@@ -13,10 +13,6 @@
     justify-content: space-around;
 }
 
-.flex_end{
-    justify-content: flex-end;
-}
-
 .column{
     display: flex;
     flex-direction: column;
