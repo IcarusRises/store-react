@@ -1,0 +1,29 @@
+.Searchbar form {
+    display: flex;
+}
+
+.Searchbar form input {
+    width: 50rem;   
+    height: 36px;
+    border: 3px solid var(--dark-grey);
+    border-right: none;
+    padding: 5px;
+    outline: none;
+    color: var(--blue);
+}
+
+.Searchbar form input:focus {
+    color: var(--dark-grey);
+}
+
+.Searchbar form button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid var(--dark-grey);
+    background: var(--dark-grey);
+    text-align: center;
+    color: var(--light-blue);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
