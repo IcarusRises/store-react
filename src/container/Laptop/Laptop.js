@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
-
+import {connect} from 'react-redux';
 import Carousel from '../../component/Carousel/Carousel'
 import TabsNav from '../../component/Tabs/TabsNav';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -26,6 +26,12 @@ class Laptop extends Component{
 
     render(){
         console.log(this.state.laptop)
+        const editLaptop = (
+            <React.Fragment>
+                <button>Edit</button>
+            </React.Fragment>
+        )
+        const authVerified = this.props.authenticated.uid ?  editLaptop : '';
         return(
             <div className={styles.container}>
                 <div className={styles.row}>
@@ -48,7 +54,7 @@ class Laptop extends Component{
                         </p>
                     </div>
                     <div className={`${styles.column} ${styles.box}`}>
-                        <p className={styles.box_sold}>Sold and Shipped By: <span>Linh Cell</span></p>
+                        <p className={styles.box_sold}>Sold and Shipped By: <span>Linh Cell</span>{authVerified}</p>
                         <ul className={styles.box_list}>
                             <li className={styles.box_price}>
                                 ${this.state.laptop.price}
@@ -88,4 +94,10 @@ class Laptop extends Component{
     };
 };
 
-export default Laptop;
+const mapStateToProps = (state) => {
+    return{
+        authenticated: state.authenticated
+    }
+}
+
+export default connect(mapStateToProps)(Laptop);
