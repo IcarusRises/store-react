@@ -1,18 +1,40 @@
-import React from 'react';
-
+import React, {Fragment} from 'react';
+import {connect} from 'react-redux';
 import NavigationItem from './NavigationItem/NavigationItem';
-
+import {signOut} from '../../../store/actions/authentication';
 import styles from './NavigationItems.module.css';
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-const navigationItems = () => (
-        <ul className={styles.NavigationItems}>
+const navigationItems = (props) => {
+    const {authenticated, signOut} = props;
+    console.log(authenticated)
+    const authOnlyLinks = (
+        <Fragment>
             <NavigationItem link='/add'><FontAwesomeIcon icon="plus" /></NavigationItem>
             <NavigationItem link='/'><FontAwesomeIcon icon="minus" /></NavigationItem>
-            <NavigationItem link='/cart'><FontAwesomeIcon icon="shopping-cart" /></NavigationItem>
+            <li><button onClick={signOut}>Sign Out</button></li>
+        </Fragment>
+    )
+    const authVerified = authenticated.uid ?  authOnlyLinks : '';
+    return(
+        <ul className={styles.NavigationItems}>
+             <NavigationItem link='/cart'><FontAwesomeIcon icon="shopping-cart" /></NavigationItem>
+            {authVerified}
         </ul>
-    
-)
+        )
+    }
 
-export default navigationItems;
+
+const mapStateToProps = (state) => {
+    return{
+        authenticated: state.authenticated
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        signOut: () => dispatch(signOut())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(navigationItems);
