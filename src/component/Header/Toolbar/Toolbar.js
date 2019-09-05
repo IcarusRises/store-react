@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import Searchbar from '../Searchbar/Searchbar';
+import Searchbar from '../../../container/Searchbar/Searchbar';
 
 import styles from './Toolbar.module.css';
 
