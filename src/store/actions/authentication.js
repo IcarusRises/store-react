@@ -10,10 +10,7 @@ export const startListeningToAuthChanges = () => {
                     user: user,
                 })
             } else {
-                dispatch({
-                    type: actionTypes.FETCH_USER,
-                    user: null
-                })
+                dispatch(signOut())
             }
         })
     }
@@ -23,7 +20,7 @@ export const signOut = () => {
     return dispatch => {
         fireAuth.signOut()
             .then(() => {
-                console.log('Successfully Logged Off')
+                dispatch({type: actionTypes.SIGN_OUT_SUCCESS})
             })
             .catch(err => {
                 console.log(err)
