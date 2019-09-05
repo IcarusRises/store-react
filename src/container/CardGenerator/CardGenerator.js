@@ -37,7 +37,7 @@ class CardGenerator extends Component {
     }
 
     render(){
-        this.state.laptops.map(laptop => console.log(laptop._id))
+        this.state.laptops.map(laptop => console.log(this.state.laptops))
         return this.state.laptops.map(laptop => this.renderLaptops(laptop));
     }
 }
