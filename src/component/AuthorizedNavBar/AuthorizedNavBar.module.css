@@ -1,0 +1,10 @@
+.authorized_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.authorized_nav li{
+    list-style-type: none;
+    margin: 0 3px;
+}
