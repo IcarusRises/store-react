@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Axios from 'axios';
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Carousel from '../../component/Carousel/Carousel'
 import TabsNav from '../../component/Tabs/TabsNav';
@@ -14,24 +15,32 @@ class Laptop extends Component{
     }
 
     componentDidMount(){
-        Axios.get('http://localhost:3001/laptops/' + this.props.match.params.id)
-        .then(res => {
-            let laptop = res.data;
-            this.setState({
-                laptop: laptop
+        axios.get('http://localhost:3001/laptops/' + this.props.match.params.id)
+            .then(res => {
+                let laptop = res.data;
+                this.setState({
+                    laptop: laptop
+                })
             })
-        })
-        .catch(err => console.log('Error: ' + err))
+            .catch(err => console.log('Error: ' + err))
+    }
+
+    delete = () => {
+        axios.delete('http://localhost:3001/laptops/' + this.props.match.params.id)
+            .then(console.log('Deleted'))
+            .catch(err => console.log(err))
     }
 
     render(){
         console.log(this.state.laptop)
-        const editLaptop = (
-            <React.Fragment>
-                <button>Edit</button>
-            </React.Fragment>
-        )
-        const authVerified = this.props.authenticated.uid ?  editLaptop : '';
+        const laptopButtons = (
+            <div>
+                <Link to={"edit/" + this.props.match.params.id}>Edit</Link>
+                <button onClick={this.delete}>Delete</button>
+            </div>
+        )   
+
+        const authVerified = this.props.authenticated.uid ?  laptopButtons : '';
         return(
             <div className={styles.container}>
                 <div className={styles.row}>
@@ -54,7 +63,7 @@ class Laptop extends Component{
                         </p>
                     </div>
                     <div className={`${styles.column} ${styles.box}`}>
-                        <p className={styles.box_sold}>Sold and Shipped By: <span>Linh Cell</span>{authVerified}</p>
+                        <p className={styles.box_sold}>Sold and Shipped By: <span>Linh Cell</span></p>
                         <ul className={styles.box_list}>
                             <li className={styles.box_price}>
                                 ${this.state.laptop.price}
@@ -67,21 +76,20 @@ class Laptop extends Component{
                             </li>
                         </ul>
                         <div className={styles.box_buttons_container}>
-                            <div>
-                                <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_subtract}`}>
-                                    <FontAwesomeIcon icon="minus" />
-                                </button>
-                                <div className={styles.box_buttons_inline}>
-                                    <input type="number" className={styles.number}/>
-                                </div>
-                                <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_add}`}>
-                                    <FontAwesomeIcon icon="plus" />
-                                </button>
-                                <button className={`${styles.button_pointer} ${styles.button_cart} ${styles.box_buttons_inline}`}>
-                                    <FontAwesomeIcon icon="shopping-cart"/> Add to Cart
-                                </button>
+                            <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_subtract}`}>
+                                <FontAwesomeIcon icon="minus" />
+                            </button>
+                            <div className={styles.box_buttons_inline}>
+                                <input type="number" className={styles.number}/>
                             </div>
+                            <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_add}`}>
+                                <FontAwesomeIcon icon="plus" />
+                            </button>
+                            <button className={`${styles.button_pointer} ${styles.button_cart} ${styles.box_buttons_inline}`}>
+                                <FontAwesomeIcon icon="shopping-cart"/> Add to Cart
+                            </button>
                         </div>
+                        {authVerified}
                     </div>
                 </div>
                 <div className={styles.row}>
