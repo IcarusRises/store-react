@@ -1,12 +1,13 @@
 import React from 'react';
-
-import pcLogo from '../../assets/logo/pclogo.png';
-
+import {Link} from 'react-router-dom';
+import pcLogo from '../../assets/logo/logo.png';
 import styles from './Logo.module.css';
 
 const logo = () => (
     <div className={styles.Logo}>
-        <img src={pcLogo} alt="Pc Logo"/>
+        <Link to='/'>
+            <img src={pcLogo} alt="Pc Logo"/>
+        </Link>
     </div>
 )
 
