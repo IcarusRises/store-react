@@ -1,22 +1,23 @@
 import React from 'react';
 
 import Logo from '../../Logo/Logo';
-import NavigationItems from '../NavigationItems/NavigationItems';
+import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
 import Searchbar from '../../../container/Searchbar/Searchbar';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import styles from './Toolbar.module.css';
 
 const toolbar = () => (
     <header>
         <nav className={styles.Toolbar}>
-            <div>
+            <div className={styles.Logo}>
                 <Logo/>
             </div>
             <div>
                 <Searchbar/>
             </div>
             <div>
-                <NavigationItems/>
+                <NavigationItem link='/cart'><FontAwesomeIcon className={styles.Cart_Icon} icon="shopping-cart" /></NavigationItem>
             </div>
         </nav>
     </header>
