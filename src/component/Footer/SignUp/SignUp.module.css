@@ -1,23 +1,25 @@
-.SignupContainer {
+.center{
     margin: 0 auto;
+}
+
+.SignupContainer {
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: center;
     width: 40rem;
-    background: rgba(0,0,0,0.2);
     border-radius: 15px;
     color: white;
 }
 
 .SignUp form input {
-    margin-bottom: .6rem;
+    display: inline-block;
+    margin: 0 auto;
     width: 25rem;   
-    height: 36px;
+    height: 35px;
     border: none;
-    border-right: none;
+    border-radius: 5px 0px 0px 5px;
     padding: 5px;
-    outline: none;
+
 }
 
 .SignUp form input:focus {
@@ -27,11 +29,15 @@
 .SignUp form button {
     width: 100px;
     height: 36px;
-    border: 1px solid var(--dark-grey);
+    border: none;
     background: var(--blue);
     text-align: center;
     color:white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.2rem;
+}
+
+.Signup_CTA {
+    margin-bottom: .5rem;
 }
