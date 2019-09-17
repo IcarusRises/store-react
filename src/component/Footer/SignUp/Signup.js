@@ -8,11 +8,11 @@ const signUp = () => (
     
     <div className={styles.SignupContainer}>
         <div className={styles.SignUp}>
-            <form action="">
+            <p className={styles.Signup_CTA}>Sign Up for News and Deals</p>
+            <form className={styles.center}>
                 <input type="text"/>
                 <button><FontAwesomeIcon icon="envelope"/></button>
             </form>
-            <p>Sign Up for News and Deals</p>
         </div>
     </div>
 )
