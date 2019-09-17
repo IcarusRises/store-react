@@ -1,0 +1,14 @@
+.SocialMediaBox_List {
+    display: flex;
+}
+
+
+.SocialMediaBox_List li{
+    list-style-type: none;
+}
+
+.SocialMediaBox_List li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
