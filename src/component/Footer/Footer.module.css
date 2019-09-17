@@ -6,10 +6,19 @@
     background-color: var(--footer-bg);
 }
 
+.Footer_Bottom_Links {
+    display: flex;
+    justify-content: space-between;
+}
+
 .Box {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 30px 40px;
+}
+
+.Box ul {
+    display: inline-block;
 }
 
 .Box ul li {
@@ -24,8 +33,12 @@
 }
 
 .BottomText {
-    position: absolute;
-    bottom: 5px;
+    background-color: black;
+    margin-top: 5px;
+    padding: 5px;
+    color: white;
+    bottom: 10px;
     width: 100%;
     text-align: center;
 }
+
