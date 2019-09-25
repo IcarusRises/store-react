@@ -12,8 +12,5 @@ html {
 body {
     height: 100%;
     background: var(--bg);
-}
 
-.Container {
-    position: relative;
 }
