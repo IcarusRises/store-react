@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import axios from 'axios';
+import styles from './Contact.module.css';
 
 import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
 
@@ -45,21 +46,23 @@ class Contact extends Component{
         return(
             <Fragment>
                 <BreadCrumbs links={links}/>
-                <form onSubmit={this.handleSubmit.bind(this)} action="POST">
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <input type="text" id="name"/>
-                    </div>
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <input type="text" id="email"/>
-                    </div>
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <textarea type="text" id="message"/>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
+                <div className={styles.Contact_Container}>
+                    <form onSubmit={this.handleSubmit.bind(this)} action="POST" className={styles.Contact_Form}>
+                        <p className={styles.Contact_Title}>Whats on your mind?</p>
+                        <div>
+                            <label htmlFor=""  className={styles.Contact_Label}>Name</label>
+                            <input type="text" id="name"/>
+                        </div>
+                        <div>
+                            <label htmlFor=""  className={styles.Contact_Label}>Email</label>
+                            <input type="email" id="email"/>
+                        </div>
+                        <div>
+                            <textarea type="text" className={styles.Contact_Text}/>
+                        </div>
+                        <button type="submit" className={styles.Contact_Button}>Submit</button>
+                    </form>
+                </div>
             </Fragment>
         )
     }

@@ -2,8 +2,6 @@
     padding: 0;
     list-style-type: none;
     margin: 0 1px;
-    width: 100px;
-    background-color: var(--dark-grey);
     border-top: 2px solid transparent;
     text-transform: uppercase;
     text-align: center;
@@ -13,11 +11,5 @@
 
 .NavigationItem a {
     text-decoration: none;
-    color: var(--light-blue);
-    display: block;
     padding: 1.40rem;
-}
-
-.NavigationItem:hover {
-    border-top: 2px solid var(--light-blue);
 }

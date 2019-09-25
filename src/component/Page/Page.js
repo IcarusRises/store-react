@@ -11,12 +11,13 @@ import Contact from '../../container/Contact/Contact';
 import SignIn from '../SignIn/SignIn';
 import SearchResults from '../../container/SearchResults/SearchResults';
 import Footer from '../Footer/Footer';
+import styles from './Page.module.css';
 
 const page = (props) => {
     const {authenticated} = props;
     const authVerified = authenticated.uid ? <AuthorizedNavBar/> : '';
     return(
-        <div>
+        <div className={styles.Page_Grid}>
             <Toolbar/>
             {authVerified}
             <Switch>

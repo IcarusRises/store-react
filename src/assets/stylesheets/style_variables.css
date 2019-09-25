@@ -1,17 +1,19 @@
 :root {
     --bg: #F8f8f8;
-    --blue: rgb(22, 13, 252);
+    --blue: #0000ff;
     --light-blue: #5853FF;
     --blue-transparent: rgba(88,83,255,.8);
-    --dark-grey: #161e26;
-    --light-grey: #f2f3f6;
+    --dark-grey: #282828;
+    --light-grey: #C0C0C0;
 
+    /* Header */
+    --toolbar: #0000ff;
+    
     /* Card */
     --card-bg: #fff;
     --card-secondary-bg: #F8F8F8;
     --card-btn-primary: #00b4cc;
 
     /* Footer  */
-    --footer-height: 230px;
-    --footer-bg: #181818;
+    --footer-bg: #0000ff;
 }

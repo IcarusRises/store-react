@@ -1,10 +1,24 @@
+.Toolbar_Header {
+    grid-area: header;
+}
+
 .Toolbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    justify-self: center;
-    background-color: #1d2732;
+    background-color: var(--toolbar);
     top: 0px;
-    height: 70px;
+    height: 55px;
     border-bottom: 1px solid #000;
+}
+
+.Toolbar_Logo{
+    margin-right: auto;
+    margin-top: 3px;
+    padding-left: 20px;
+}
+
+.Toolbar_Cart_Icon{
+    height: 54px;
+    color: white;
 }
