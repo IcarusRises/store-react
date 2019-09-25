@@ -1,0 +1,41 @@
+form input {
+    margin: 0;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.Contact_Container {
+    width: 30%;
+    padding: 2rem 0;
+    margin: 0 55%;
+    margin-bottom: 3rem;
+}
+
+.Contact_Form {
+    display: inline-block;
+    width: 100%;
+}
+
+.Contact_Label {
+}
+
+.Contact_Title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.Contact_Text {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 1rem;
+}
+
+.Contact_Button {
+    width: 200px;
+    height: 36px;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
