@@ -1,19 +1,12 @@
-.Store_Products {
-    grid-area: cards;
+.Center {
+    display: flex;
+    justify-content: center;
 }
 
 .Store {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 25%);
     grid-gap: 10px;
     justify-content: space-evenly;
     margin-bottom: var(--footer-height);
-}
-
-.Store_Carousel {
-    grid-area: slider;
-}
-
-.Store_Sidebar{
-    grid-area: side;
 }

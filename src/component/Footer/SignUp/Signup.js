@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './SignUp.module.css';
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const signUp = () => (

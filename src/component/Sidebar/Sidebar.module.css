@@ -1,8 +1,11 @@
 .Sidebar {
+    padding: 50px 115px 0 115px;
+    left: 0;
+    top: 65px;
     list-style: none;
     text-align: center;
     text-transform: capitalize;
-    background-color: var(--dark-grey);
+    background-color: var(--blue-transparent);
 }
 
 .Sidebar li a {
