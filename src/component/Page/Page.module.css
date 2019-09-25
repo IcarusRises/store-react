@@ -1,0 +1,9 @@
+.Page_Grid {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "side slider slider"
+                         "card card card"
+                         "footer footer footer";
+    grid-template-rows: 55px 2fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
+}
