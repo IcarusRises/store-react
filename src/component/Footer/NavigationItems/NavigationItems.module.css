@@ -1,0 +1,12 @@
+.NavigationItems_List {
+    display: flex;
+}
+
+.NavigationItems_List li {
+    list-style-type: none;
+}
+
+.NavigationItems_List li a {
+    color: white;
+    margin-left: 15px;    
+}
