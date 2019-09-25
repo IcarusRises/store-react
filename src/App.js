@@ -9,7 +9,7 @@ library.add(faShoppingCart, faSearch, faEnvelope, faPlus, faMinus);
 class App extends Component{
   render(){
     return(
-        <div className={styles.Container}>
+        <div>
           <Page/>
         </div>
     )
