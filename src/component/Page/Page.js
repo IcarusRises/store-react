@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import AuthorizedNavBar from '../AuthorizedNavBar/AuthorizedNavBar';
@@ -16,7 +16,7 @@ const page = (props) => {
     const {authenticated} = props;
     const authVerified = authenticated.uid ? <AuthorizedNavBar/> : '';
     return(
-        <div>
+        <Fragment>
             <Toolbar/>
             {authVerified}
             <Switch>
@@ -32,7 +32,7 @@ const page = (props) => {
                 <Redirect to="/"/>
             </Switch>
             <Footer/>
-        </div>
+        </Fragment>
     );
 }
 
