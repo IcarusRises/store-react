@@ -1,16 +1,21 @@
+.Sidebar_Container {
+    grid-area: var(--grid-sider);
+}
+
 .Sidebar {
-    padding: 50px 115px 0 115px;
+    height: 550px;
+    padding: 50px 20px 0 115px;
     left: 0;
     top: 65px;
     list-style: none;
-    text-align: center;
+    text-align: right;
     text-transform: capitalize;
-    background-color: var(--blue-transparent);
+    background-color: var(--sider);
 }
 
 .Sidebar li a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .Sidebar li a:hover {
