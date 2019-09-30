@@ -1,12 +1,17 @@
-.Center {
-    display: flex;
-    justify-content: center;
+.Store_Container {
+    grid-area: var(--grid-cards);
+}
+
+.Store_Empty_Area_E {
+    grid-area: var(--store-empty-area-e);
+    height: 0;
+    width: 0;
 }
 
 .Store {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-gap: 10px;
     justify-content: space-evenly;
-    margin-bottom: var(--footer-height);
+    margin-top: 2rem;
+    margin-bottom: .8rem;
 }
