@@ -4,6 +4,27 @@ form input {
     margin-bottom: 1rem;
 }
 
+.Contact_Form_Container {
+    grid-area: var(--contact-form);
+}
+
+.Contact_Empty_Area_A {
+    grid-area: var(--contact-empty-area-a);
+    height: 0;
+    width: 0;
+}
+
+.Contact_Empty_Area_B {
+    grid-area: var(--contact-empty-area-b);
+    height: 0;
+    width: 0;
+}
+
+.Contact_Empty_Area_D {
+    grid-area: var(--contact-empty-area-d);
+    height: 300px;
+}
+
 .Contact_Container {
     width: 30%;
     padding: 2rem 0;
