@@ -1,5 +1,5 @@
 .breadCrumbs {
-    margin-bottom: 3rem;
+    grid-area: var(--grid-breakcrumbs);
     padding: 10px 16px;
     list-style: none;
     background-color: var(--light-grey); 
