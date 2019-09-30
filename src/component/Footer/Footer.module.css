@@ -1,8 +1,5 @@
 .Footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: var(--footer-height);
+    grid-area: var(--grid-footer);
     background-color: var(--footer-bg);
 }
 
@@ -33,7 +30,7 @@
 }
 
 .BottomText {
-    background-color: black;
+    background-color: var(--footer-bottom);
     margin-top: 5px;
     padding: 5px;
     color: white;
