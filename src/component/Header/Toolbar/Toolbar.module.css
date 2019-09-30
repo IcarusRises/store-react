@@ -1,10 +1,13 @@
+.Toolbar_Container {
+    grid-area: var(--grid-header);
+}
+
 .Toolbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-self: center;
-    background-color: #1d2732;
+    background-color: var(--header);
     top: 0px;
-    height: 70px;
-    border-bottom: 1px solid #000;
+    height: 60px;
 }
