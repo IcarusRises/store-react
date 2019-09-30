@@ -28,9 +28,9 @@
 
 .SignUp form button {
     width: 100px;
-    height: 36px;
+    height: 35px;
     border: none;
-    background: var(--blue);
+    background: var(--dark-blue);
     text-align: center;
     color:white;
     border-radius: 0 5px 5px 0;
