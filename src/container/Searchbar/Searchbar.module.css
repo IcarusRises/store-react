@@ -3,13 +3,11 @@
 }
 
 .Searchbar form input {
+    height: 35px;
     width: 50rem;   
-    height: 36px;
-    border: 3px solid var(--dark-grey);
-    border-right: none;
-    padding: 5px;
-    outline: none;
-    color: var(--blue);
+    margin: 0;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .Searchbar form input:focus {
@@ -17,12 +15,12 @@
 }
 
 .Searchbar form button {
-    width: 40px;
-    height: 36px;
-    border: 1px solid var(--dark-grey);
-    background: var(--dark-grey);
+    width: 50px;
+    margin-top: -.8px;
+    border: none;
+    background: var(--dark-blue);
     text-align: center;
-    color: var(--light-blue);
+    color: var(--white);
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
