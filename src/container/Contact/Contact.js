@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import axios from 'axios';
-
 import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
+import styles from './Contact.module.css';
 
 class Contact extends Component{
 
@@ -45,21 +45,32 @@ class Contact extends Component{
         return(
             <Fragment>
                 <BreadCrumbs links={links}/>
-                <form onSubmit={this.handleSubmit.bind(this)} action="POST">
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <input type="text" id="name"/>
-                    </div>
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <input type="text" id="email"/>
-                    </div>
-                    <div>
-                        <label htmlFor="">Name</label>
-                        <textarea type="text" id="message"/>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
+                <div className={styles.Contact_Empty_Area_A}>
+                test a
+                </div>
+                <div className={styles.Contact_Empty_Area_B}>
+                test b
+                </div>
+                <div className={styles.Contact_Form_Container}>
+                    <form onSubmit={this.handleSubmit.bind(this)} action="POST">
+                        <div>
+                            <label htmlFor="">Name</label>
+                            <input type="text" id="name"/>
+                        </div>
+                        <div>
+                            <label htmlFor="">E-mail</label>
+                            <input type="text" id="email"/>
+                        </div>
+                        <div>
+                            <label htmlFor="">How can I help?</label>
+                            <textarea type="text" id="message"/>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div className={styles.Contact_Empty_Area_D}>
+
+                </div>
             </Fragment>
         )
     }
