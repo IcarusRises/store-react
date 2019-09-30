@@ -1,17 +1,55 @@
 :root {
     --bg: #F8f8f8;
     --blue: rgb(22, 13, 252);
+    --black: #000;
     --light-blue: #5853FF;
+    --dark-blue: #00008B;
     --blue-transparent: rgba(88,83,255,.8);
     --dark-grey: #161e26;
     --light-grey: #f2f3f6;
+    --white: #fff;
+
+
+    /* Header */
+    --header: rgb(22, 13, 252);
+
+    /* Sider */
+    --sider: #161e26;
 
     /* Card */
-    --card-bg: #fff;
+    --card-header: #fff;
+    --card-bg: #f2f3f6;
     --card-secondary-bg: #F8F8F8;
     --card-btn-primary: #00b4cc;
 
     /* Footer  */
     --footer-height: 230px;
-    --footer-bg: #181818;
+    --footer-bg:  rgb(22, 13, 252);;
+    --footer-bottom: #161e26;
+
+
+    /* --------Grid-Area------- */
+
+    /* Layout */
+    --grid-header: header;
+    --grid-breadcrumbs: e;
+    --grid-footer: footer;
+
+    /* Home */
+    --store-empty-area-e: e;
+    --grid-sider: a;
+    --grid-slider: c;
+    --grid-cards: d;
+
+    /* Laptop */
+    --laptop-slider: a;
+    --laptop-labels: b;
+    --laptop-pricebox: c;
+    --laptop-tabs: d;
+
+    /* Contact */
+    --contact-form: c;
+    --contact-empty-area-a: a;
+    --contact-empty-area-b: b;
+    --contact-empty-area-d: d;
 }
