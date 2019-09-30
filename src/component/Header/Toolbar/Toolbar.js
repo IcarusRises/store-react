@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import styles from './Toolbar.module.css';
 
 const toolbar = () => (
-    <header>
+    <header className={styles.Toolbar_Container}>
         <nav className={styles.Toolbar}>
             <div className={styles.Logo}>
                 <Logo/>
