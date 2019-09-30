@@ -5,12 +5,15 @@ import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
 import styles from './Sidebar.module.css';
 
 const sidebar = () => (
-    <ul className={styles.Sidebar}>
-        <NavigationItem link='/'>Home</NavigationItem>
-        <NavigationItem link='#'>Test</NavigationItem>
-        <NavigationItem link='#'>Test</NavigationItem>
-        <NavigationItem link='#'>Test</NavigationItem>
-    </ul>
+    <div className={styles.Sidebar_Container}>
+        <ul className={styles.Sidebar}>
+            <NavigationItem link='#'>Apple</NavigationItem>
+            <NavigationItem link='#'>Asus</NavigationItem>
+            <NavigationItem link='#'>Lenovo</NavigationItem>
+            <NavigationItem link='#'>HP</NavigationItem>
+            <NavigationItem link='#'>Dell</NavigationItem>
+        </ul>
+    </div>
 );
 
 
