@@ -1,21 +1,31 @@
-.container{
-    height: 100vh;
-    padding: 50px;
-    background-color: white;
-}
-
 .row{
     display: flex;
     flex-direction: row;
+}
+
+.Laptop_Slider {
+    grid-area: var(--laptop-slider);
 }
 
 .center{
     justify-content: space-around;
 }
 
-.column{
+.Laptop_Cart_Box {
+    grid-area: var(--laptop-pricebox);
+}
+
+.Laptop_Tabs {
+    grid-area: var(--laptop-tabs);
     display: flex;
-    flex-direction: column;
+}
+
+.Laptop_Labels {
+    grid-area: var(--laptop-labels);
+}
+
+.Laptop_Cart_Box_Prices {
+    display: inline;
 }
 
 .laptop{
@@ -25,10 +35,10 @@
     line-height: 1.5rem;
 }
 
-.box{
+.Price_Box{
     padding: 5px;
     background-color: var(--light-grey);
-    width: 30%;
+    width: 400px;
     height: 260px;
     border: 1px solid var(--dark-grey);
     list-style: none;
@@ -73,10 +83,7 @@
 .box_price{
     font-size: 2rem;
     font-weight: 600;
-}
-
-.button_pointer{
-    cursor: pointer;
+    align-content: flex-end;
 }
 
 .button_cart{
@@ -84,7 +91,8 @@
     border: none;
     color: white;
     padding: 15px 20px;
-    text-align: center;    
+    text-align: center;   
+    cursor: pointer; 
 }
 
 .button_cart:hover{
