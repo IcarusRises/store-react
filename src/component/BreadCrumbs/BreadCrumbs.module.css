@@ -1,5 +1,5 @@
 .breadCrumbs {
-    grid-area: var(--grid-breakcrumbs);
+    grid-area: var(--grid-breadcrumbs);
     padding: 10px 16px;
     list-style: none;
     background-color: var(--light-grey); 
