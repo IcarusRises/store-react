@@ -1,0 +1,50 @@
+/* GRID AREA */
+
+.AboutUs_Area_A {
+    grid-area: a;
+}
+
+.AboutUs_Area_B {
+    grid-area: b;
+}
+
+.AboutUs_Area_C {
+    grid-area: c;
+}
+
+.AboutUs_Area_D {
+    grid-area: d;
+}
+
+/* STYLING */
+
+.AboutUs_Image {
+    margin-top: 2rem;
+}
+
+.About_Us_Who_I_Am_Title {
+    font-size: 2rem;
+}
+
+.About_Us_Who_I_Am_Blurb {
+    background-color: var(--light-grey);
+    border: 4px solid var(--blue);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-right: 10rem;
+}
+
+.About_Us_Who_I_Am_Guarantee {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.About_Us_Who_I_Am_Blurb_Guarantee {
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border-bottom: 1rem solid black;
+}
