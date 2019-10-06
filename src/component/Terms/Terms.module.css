@@ -1,0 +1,52 @@
+/* GRID */
+
+.Terms_Area_A {
+    grid-area: a;
+    width: 200px;
+}
+
+.Terms_Area_B {
+    grid-area: b;
+}
+
+.Terms_Area_C {
+    grid-area: c;
+    width: 200px;
+}
+
+.Terms_Area_D {
+    grid-area: d;
+}
+
+/*  */
+
+.Terms_Area_B p {
+    margin-bottom: 1.5rem;
+}
+
+.Terms_Area_B ul li {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.Terms_Title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.Terms_Topic_Title {
+    margin: 1.5rem 0;    
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.Terms_Topic_Blurb {
+    line-height: 2rem;
+}
+
+.Terms_Update {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--grey);
+}
