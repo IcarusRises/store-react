@@ -1,62 +1,96 @@
-form input {
-    margin: 0;
-    margin-top: .5rem;
-    margin-bottom: 1rem;
+/* GRID AREA */
+.Contact_Form_Empty_Area_A {
+    grid-area: var(--contact-empty-area-a);
+    height: 0;
+    width: 300px;
+}
+
+.Contact_Form_Empty_Area_C {
+    grid-area: var(--contact-empty-area-c);
+    height: 0;
+    width: 300px;
+}
+
+.Contact_Form_Empty_Area_D {
+    grid-area: var(--contact-empty-area-d);
+    height: 100px;
 }
 
 .Contact_Form_Container {
     grid-area: var(--contact-form);
-}
-
-.Contact_Empty_Area_A {
-    grid-area: var(--contact-empty-area-a);
-    height: 0;
-    width: 0;
-}
-
-.Contact_Empty_Area_B {
-    grid-area: var(--contact-empty-area-b);
-    height: 0;
-    width: 0;
-}
-
-.Contact_Empty_Area_D {
-    grid-area: var(--contact-empty-area-d);
-    height: 300px;
-}
-
-.Contact_Container {
-    width: 30%;
-    padding: 2rem 0;
-    margin: 0 55%;
-    margin-bottom: 3rem;
-}
-
-.Contact_Form {
-    display: inline-block;
-    width: 100%;
-}
-
-.Contact_Label {
-}
-
-.Contact_Title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.Contact_Text {
-    width: 100%;
+    margin-top: 50px;
     height: 500px;
-    margin-bottom: 1rem;
+    background-color: var(--blue);
+    border-radius: 5px;
+    background-image: url('https://images.pexels.com/photos/2474729/pexels-photo-2474729.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 }
 
-.Contact_Button {
-    width: 200px;
-    height: 36px;
-    text-align: center;
-    background-color: var(--blue);
-    color: white;
+
+/* FORM */
+form input {
+    margin: 0;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
     border: none;
+}
+
+.Contact_Form_Title{
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.Contact_Form_Input {
+    margin: 0 auto;
+    color: var(--white);
+    width: 80%;
     border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.Contact_Selection {
+
+    width: 80%;
+    height: 2.5em;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    margin-bottom: 15px;
+}
+
+.Contact_Form_Input:focus {
+    border: 2px solid var(--dark-blue);
+}
+
+.Contact_Form_Button {
+    margin: 0 auto;
+    width:50%;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1.55rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: 70px;
+    font-weight: 700px;
+}
+
+.Contact_Form_Button:hover {
+    background-color: var(--light-blue);
+}
+
+.Center{
+    text-align: center;
 }
