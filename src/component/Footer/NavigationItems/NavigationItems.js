@@ -5,10 +5,10 @@ import styles from './NavigationItems.module.css';
 const navigationItems = (props) => (
     <ul className={styles.NavigationItems_List}>
         <li>{props.name}</li>
-        <NavigationItem link='#'>About Us</NavigationItem>
+        <NavigationItem link='/aboutus'>About Us</NavigationItem>
         <NavigationItem link='/contact'>Contact Us</NavigationItem>
-        <NavigationItem link='#'>Privacy Policy</NavigationItem>
-        <NavigationItem link='#'>Terms and Conditions</NavigationItem>
+        <NavigationItem link='/privacy'>Privacy Policy</NavigationItem>
+        <NavigationItem link='/terms-conditions'>Terms and Conditions</NavigationItem>
     </ul>
 )
 
