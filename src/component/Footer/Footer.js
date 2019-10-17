@@ -1,8 +1,7 @@
 import React from 'react';
 import SocialMediaBox from './SocialMediaBox/SocialMediaBox';
 import NavigationItems from './NavigationItems/NavigationItems';
-import SignUp from './SignUp/Signup';
-
+import SignUp from '../../container/SignUp/Signup';
 import styles from './Footer.module.css';
 
 const footer = () => (
