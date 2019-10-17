@@ -5,6 +5,8 @@
 
 .Laptop_Slider {
     grid-area: var(--laptop-slider);
+    margin-top: 2rem;
+    justify-self: center;
 }
 
 .center{
@@ -13,15 +15,20 @@
 
 .Laptop_Cart_Box {
     grid-area: var(--laptop-pricebox);
+    justify-self: center;
 }
 
 .Laptop_Tabs {
     grid-area: var(--laptop-tabs);
     display: flex;
+    justify-self: center;
 }
 
 .Laptop_Labels {
     grid-area: var(--laptop-labels);
+    width: 300px;
+    justify-self: center;
+    margin-top: 2rem;
 }
 
 .Laptop_Cart_Box_Prices {
@@ -37,6 +44,7 @@
 
 .Price_Box{
     padding: 5px;
+    margin-top: 2rem;
     background-color: var(--light-grey);
     width: 400px;
     height: 260px;
