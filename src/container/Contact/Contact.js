@@ -3,38 +3,62 @@ import axios from 'axios';
 import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
 import styles from './Contact.module.css';
 
-class Contact extends Component{
-
-    handleSubmit(e){
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        const data = {
-                name: name,   
-                email: email,  
-                message: message
+class Contact extends Component {
+    state = {
+        form: {
+            name: {
+                value: ''
+            },
+            email: {
+                value: ''
+            },
+            help: {
+                value: ''
+            },
+            comment: {
+                value: ''
             }
-  
-        const test = 'test';
-        axios.post('http://localhost:3001/contact', data)
-        .then(res => console.log(res.data))
-        .then((response)=>{
-            if (test === 'success'){
-                alert("Message Sent."); 
-                this.resetForm()
-            }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+        }
+    }
+
+    inputHandler = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        
+        this.setState({
+            form : {
+                ...this.state.form,
+                [name]: {
+                    ...this.state.form[name],
+                    value
+                }
             }
         })
     }
 
-    resetForm(){
-        document.getElementById('contact-form').reset();
-    }
+    submitHandler = (e) => {
+        e.preventDefault();
 
-        
+        const form = {
+                name: this.state.form.name.value,   
+                email: this.state.form.email.value,  
+                help: this.state.form.help.value,
+                comment: this.state.form.comment.value
+            }
+
+        console.log(JSON.stringify(form));
+        // const test = 'test';
+        // axios.post('http://localhost:3001/contact', form)
+        // .then(res => console.log(res.data))
+        // .then((response)=>{
+        //     if (test === 'success'){
+        //         alert("Message Sent."); 
+        //         this.resetForm()
+        //     }else if(response.data.msg === 'fail'){
+        //         alert("Message failed to send.")
+        //     }
+        // })
+    }
 
     render(
         links=[
@@ -45,31 +69,55 @@ class Contact extends Component{
         return(
             <Fragment>
                 <BreadCrumbs links={links}/>
-                <div className={styles.Contact_Empty_Area_A}>
-                test a
-                </div>
-                <div className={styles.Contact_Empty_Area_B}>
-                test b
+                <div className={styles.Contact_Form_Empty_Area_A}>
+
                 </div>
                 <div className={styles.Contact_Form_Container}>
-                    <form onSubmit={this.handleSubmit.bind(this)} action="POST">
-                        <div>
-                            <label htmlFor="">Name</label>
-                            <input type="text" id="name"/>
+                    <form onSubmit={this.submitHandler}>
+                        <p className={styles.Contact_Form_Title}>
+                            Contact Us
+                        </p>
+                        <label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                placeholder="Name" 
+                                className={`${styles.Contact_Form_Input}`} 
+                                onChange={this.inputHandler}
+                            />
+                        </label>
+                        <label>
+                            <input 
+                                type="text" 
+                                name="email" 
+                                placeholder="Email" 
+                                className={`${styles.Contact_Form_Input}`} 
+                                onChange={this.inputHandler}/>
+                        </label>
+                        <div className={styles.Center}>
+                            <label>
+                                <select name="help" value={this.state.form.help.value} className={`${styles.Contact_Selection}`} onChange={this.inputHandler}>
+                                    <option value="" disabled selected>How can we help?</option>
+                                    <option value="delivery" name="delivery">Delivery</option>
+                                    <option value="technical" name="technical">Technical</option>
+                                </select>
+                            </label>
                         </div>
-                        <div>
-                            <label htmlFor="">E-mail</label>
-                            <input type="text" id="email"/>
+                        <div className={`${styles.Center}`}>
+                            <label >
+                                <textarea type="text" name='comment' placeholder="Comment" className={`${styles.Contact_Form_Input}`} onChange={this.inputHandler}/>
+                            </label>
                         </div>
-                        <div>
-                            <label htmlFor="">How can I help?</label>
-                            <textarea type="text" id="message"/>
+                        <div className={`${styles.Center}`}>
+                            <button type="submit" className={styles.Contact_Form_Button}>Submit</button>
                         </div>
-                        <button type="submit">Submit</button>
                     </form>
                 </div>
-                <div className={styles.Contact_Empty_Area_D}>
+                <div className={styles.Contact_Form_Empty_Area_C}>
 
+                </div>
+                <div className={styles.Contact_Form_Empty_Area_D}>
+                    
                 </div>
             </Fragment>
         )
