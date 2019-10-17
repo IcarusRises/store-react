@@ -40,10 +40,10 @@ const aboutUs = () => (
             </div>
         </div>
         <div className={styles.AboutUs_Area_D}>
+            <p className={`${styles.About_Us_Who_I_Am_Blurb_Guarantee}`}>
             <p className={`${styles.About_Us_Who_I_Am_Title} ${styles.About_Us_Who_I_Am_Guarantee}`}>
                 My Guarantee
             </p>
-            <p className={`${styles.About_Us_Who_I_Am_Blurb_Guarantee}`}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam praesentium recusandae, quisquam exercitationem, veritatis voluptate necessitatibus voluptatum accusantium molestias animi vitae modi velit esse? Veniam fugiat impedit quos error.
                 Doloremque in praesentium laborum. Officiis tempore saepe nesciunt deserunt vel? Officia doloribus nam sint! Ab odio atque modi. Illo cupiditate sit corporis, quisquam veniam placeat esse suscipit perspiciatis ducimus amet.
                 Labore, culpa nostrum velit ut fugit ullam obcaecati nam, cum aperiam dignissimos temporibus neque blanditiis quia minus eaque vitae ducimus atque unde debitis expedita assumenda alias! Dicta similique quo corporis.
