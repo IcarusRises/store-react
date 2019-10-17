@@ -22,12 +22,17 @@
     margin-top: 2rem;
 }
 
+.AboutUs_Image img {
+    border-radius: 5px;
+}
+
 .About_Us_Who_I_Am_Title {
     font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .About_Us_Who_I_Am_Blurb {
-    background-color: var(--light-grey);
     border: 4px solid var(--blue);
     border-radius: 5px;
     padding: 1rem;
@@ -38,13 +43,17 @@
     background-color: var(--dark-grey);
     color: var(--white);
     text-align: center;
-    margin-top: 1rem;
+    margin-bottom: 1.3rem;
 }
 
 .About_Us_Who_I_Am_Blurb_Guarantee {
+    width: 90%;
     margin: 0 auto;
-    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 5px;
     color: var(--white);
     background-color: var(--dark-grey);
-    border-bottom: 1rem solid black;
+    line-height: 1.5rem;
 }
