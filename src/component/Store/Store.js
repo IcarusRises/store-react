@@ -1,26 +1,30 @@
 import React, {Fragment} from 'react';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../../container/Sidebar/Sidebar';
 import CardGenerator  from '../../container/CardGenerator/CardGenerator';
 import Carousel from '../Carousel/Carousel';
-
+import image1 from '../../assets/slider/placeholder.png';
 import styles from './Store.module.css';
 
 const store = () => (
     <Fragment>
         <div className={styles.Store_Empty_Area_E}>
+
         </div>
         <Sidebar/>
         <Carousel
             boolean={false} 
-            mainImage={'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2018/09/image2-27-840x430.png'}
-            secondImage={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSoDWsQasjT6229m_l-fkW72AjIWImYFfr7wK73TLa6wmKMBC'}
-            thirdImage={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSoDWsQasjT6229m_l-fkW72AjIWImYFfr7wK73TLa6wmKMBC'}
+            mainImage={image1}
+            secondImage={image1}
+            thirdImage={image1}
         />
-        <div className>
+        <div className={styles.Store_Empty_Area_C}>
 
         </div>
         <div className={styles.Store_Container}>
-            <div className={styles.Store}>
+            <div className={styles.Store_Laptops_Title}>
+                <p>Laptops</p>
+            </div>
+            <div className={`${styles.Store} ${styles.Store_Border_Bottom}`}>
                 <CardGenerator/>
             </div>
         </div>
