@@ -1,8 +1,7 @@
 .tabs_container{
    margin-bottom: 2rem; 
-   width: 88.8vw;
+   width: 90vw;
    overflow: hidden;
-   background-color: white;
    font-size: 1.1rem;
    line-height: 1.6rem;
 }
@@ -10,7 +9,11 @@
 .tabs{
     margin-right: 1px;
     border-radius: 10px 10px 0 0;
-    background-color: var(--dark-grey);
+    background: rgb(4,0,255);
+    background: -moz-linear-gradient(0deg, rgba(4,0,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(4,0,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    background: linear-gradient(0deg, rgba(4,0,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0400ff",endColorstr="#0045ff",GradientType=1); 
     color: white;
     float: left;
     border: none;
@@ -21,19 +24,23 @@
 }
 
 .tabs:hover{
-    background-color: var(--light-blue);
+    background: rgb(0,56,255);
+    background: -moz-linear-gradient(180deg, rgba(0,56,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,56,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    background: linear-gradient(180deg, rgba(0,56,255,1) 0%, rgba(0,26,255,1) 39%, rgba(0,69,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0038ff",endColorstr="#0045ff",GradientType=1);  
 }
 
 /* This isn't working, how can I fix the active class? */
 .tabs:active{
-    background-color: var(--light-blue);
+    background-color: var(--dark-blue);
     
 }
 
 .tabscontent{
     width: 100%;
     padding: 12px 20px;
-    border: 2px solid var(--dark-grey);
+    border: 1px solid var(--grey);
 }
 
 .clearfix{
