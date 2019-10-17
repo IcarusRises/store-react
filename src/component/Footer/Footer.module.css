@@ -1,6 +1,13 @@
 .Footer {
     grid-area: var(--grid-footer);
     background-color: var(--footer-bg);
+    background-image: -moz-linear-gradient(top,  #0400ff 0%, #020e5b 100%); /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(top,  #0400ff 0%,#020e5b 100%); /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to bottom,  #0400ff 0%,#020e5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0400ff', endColorstr='#020e5b',GradientType=0 ); /* IE6-9 */
+    ;
+    background-repeat: repeat-x;
+    border-top: 1px solid var(--dark-grey);
 }
 
 .Footer_Bottom_Links {
@@ -31,7 +38,7 @@
 
 .BottomText {
     background-color: var(--footer-bottom);
-    margin-top: 5px;
+    margin-top: 1rem;
     padding: 5px;
     color: white;
     bottom: 10px;
