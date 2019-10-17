@@ -4,13 +4,29 @@
 
 .Sidebar {
     height: 550px;
-    padding: 50px 20px 0 115px;
-    left: 0;
-    top: 65px;
+    width: 200px;
+    padding: 10px 0;
     list-style: none;
-    text-align: right;
     text-transform: capitalize;
     background-color: var(--sider);
+    background-image: var(--sider-gradient);
+}
+
+.Sidebar li {
+    width: 100%;
+    margin-bottom: .1rem;
+    text-align: right;
+    border: 1px solid #2A2C2F; 
+    padding: 5px 10px 5px 50px; 
+    text-decoration:none; 
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #FFFFFF;
+    background-color: var(--sider); 
+}
+
+.Sidebar li:hover {
+    border:1px solid #151617;
+    background-color: #2D2F32; 
 }
 
 .Sidebar li a {
@@ -18,6 +34,3 @@
     font-size: 1.2rem;
 }
 
-.Sidebar li a:hover {
-    transform: translateX(15px);
-}
