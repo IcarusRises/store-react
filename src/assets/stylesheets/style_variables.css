@@ -1,20 +1,40 @@
 :root {
-    --bg: #F8f8f8;
+    /* BG Color */
+    --bg: #fff;
+
+    /* Colors */
     --blue: rgb(22, 13, 252);
     --black: #000;
     --light-blue: #5853FF;
     --dark-blue: #00008B;
     --blue-transparent: rgba(88,83,255,.8);
+    --grey: #C0C0C0;
     --dark-grey: #161e26;
     --light-grey: #f2f3f6;
     --white: #fff;
+
+    /* Button */
+    --button: #ffdd00;
+    --button-gradient: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+    --button-gradient-hover: linear-gradient(to bottom, #fbb034  0%,#b3b300 74%);;
+
+    /* Gradient */
+    /* Blue */
+    --blue-gradient: linear-gradient(to bottom,  #0400ff 0%,#020e5b 100%);
+    --blue-gradient-moz: -moz-linear-gradient(to bottom,  #0400ff 0%, #020e5b 100%); 
+    --blue-gradient-webkit: -webkit-linear-gradient(to bottom,  #0400ff 0%,#020e5b 100%);
+    /* Reverse Blue */
+    --blue-reverse-gradient: linear-gradient(to top,  #0400ff 0%,#020e5b 100%);
+    --blue-reverse-gradient-moz: -moz-linear-gradient(to bottom,  #0400ff 0%, #020e5b 100%); 
+    --blue-reverse-gradient-webkit: -webkit-linear-gradient(to bottom,  #0400ff 0%,#020e5b 100%);
 
 
     /* Header */
     --header: rgb(22, 13, 252);
 
     /* Sider */
-    --sider: #161e26;
+    --sider: #45484D;
+    --sider-gradient: linear-gradient(to bottom, #2D2F32, #1A1A1A);
 
     /* Card */
     --card-header: #fff;
@@ -38,7 +58,7 @@
     /* Home */
     --store-empty-area-e: e;
     --grid-sider: a;
-    --grid-slider: c;
+    --grid-slider: b;
     --grid-cards: d;
 
     /* Laptop */
@@ -48,8 +68,11 @@
     --laptop-tabs: d;
 
     /* Contact */
-    --contact-form: c;
+    --contact-form: b;
     --contact-empty-area-a: a;
-    --contact-empty-area-b: b;
+    --contact-empty-area-c: c;
     --contact-empty-area-d: d;
+
+
 }
+
