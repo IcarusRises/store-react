@@ -22,9 +22,7 @@
     height: 500px;
     background-color: var(--blue);
     border-radius: 5px;
-    background-image: url('https://images.pexels.com/photos/2474729/pexels-photo-2474729.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 }
-
 
 /* FORM */
 form input {
@@ -68,13 +66,14 @@ form input {
 }
 
 .Contact_Form_Input:focus {
-    border: 2px solid var(--dark-blue);
+    border: 2px solid var(--button);
 }
 
 .Contact_Form_Button {
     margin: 0 auto;
     width:50%;
-    background: var(--dark-blue);
+    background: var(--button);
+    background-image: var(--button-gradient);
     border-radius: 5px;
     border: 0;
     cursor: pointer;
@@ -88,9 +87,11 @@ form input {
 }
 
 .Contact_Form_Button:hover {
-    background-color: var(--light-blue);
+    background-color: #b3b300;
+    background-image: var(--button-gradient-hover);
 }
 
 .Center{
     text-align: center;
 }
+
