@@ -35,7 +35,10 @@ class Laptop extends Component{
     render(
         links=[
             {to: '/', label: 'Home'},
-            {to:'/contact', label: 'Contact'},
+            {to:'/laptops', label: 'Laptop'},
+            {to:'/laptops/brand', label: 'Brand'},
+            {to: `/laptops/brand/${this.state.laptop.brand}`, label: `${this.state.laptop.brand}`},
+            {to: `/laptops/${this.props.match.params.id}`, label: `${this.state.laptop.name}`}
         ]
     ){
         console.log(this.state.laptop)
