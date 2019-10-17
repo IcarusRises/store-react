@@ -1,0 +1,65 @@
+/* GRID */
+
+.BrandsPage_Area_A {
+    grid-area: a;
+    width: 200px;
+}
+
+.BrandsPage_Area_B {
+    grid-area: b;
+}
+
+.BrandsPage_Area_C {
+    grid-area: c;
+    width: 200px;
+}
+
+.BrandsPage_Area_D {
+    grid-area: d;
+}
+
+.BrandsPage_Area_A_Styles {
+    background-color: var(--black);
+    width: 200px;
+}
+
+/* Brands Page */
+.BrandsPage_Container {
+    grid-area: var(--grid-cards);
+    margin: 1rem;
+}
+
+.BrandsPage_Laptops_Title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: .2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-image: var(--blue-gradient);
+    color: white;
+}
+
+.BrandsPage_Store {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-evenly;
+    border: 1px solid var(--grey);
+    margin-top: 2rem;
+}
+
+.BrandsPage_Brand_Box {
+    height: 80px;
+    margin: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+}
+
+.BrandsPage_Link {
+    text-decoration: none;
+}

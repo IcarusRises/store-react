@@ -1,0 +1,50 @@
+/* GRID AREA */
+
+.Brand_Area_A {
+    grid-area: a;
+}
+
+.Brand_Area_B {
+    grid-area: b;
+}
+
+.Brand_Area_C {
+    grid-area: c;
+    width: 200px;
+}
+
+.Brand_Area_D {
+    grid-area: var(--grid-cards);
+    margin: 1rem;
+}
+
+.Brand_Area_E {
+    grid-area: var(--grid-breadcrumbs);
+}
+
+/* Store */
+
+.Brand_Store {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-evenly;
+    border: 1px solid var(--grey);
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+    padding-bottom: 1rem;
+}
+
+.Brand_Store_Border_Bottom:not(:last-child) {
+    border-bottom: 1px solid var(--grey);
+}
+
+.Brand_Store_Laptops_Title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: .2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-image: var(--blue-gradient);
+    color: white;
+}
