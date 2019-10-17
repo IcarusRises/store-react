@@ -1,0 +1,67 @@
+.center{
+    margin: 0 auto;
+}
+
+.SignupContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    border-radius: 15px;
+    color: white;
+}
+
+.SignUp form input {
+    display: inline-block;
+    width: 25rem;   
+    height: 35px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    padding: 5px;
+
+}
+
+.SignUp form input:focus {
+    color: var(--dark-grey);
+}
+
+.SignUp form button {
+    display: inline-block;
+    height: 35px;
+    width: 100px;
+    border: none;
+    text-align: center;
+    color:white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration:none; 
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    font-weight:bold; 
+    color: #FFFFFF;
+    background-color: #ffd65e; 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd65e), to(#febf04));
+    background-image: -webkit-linear-gradient(top, #ffd65e, #febf04);
+    background-image: -moz-linear-gradient(top, #ffd65e, #febf04);
+    background-image: -ms-linear-gradient(top, #ffd65e, #febf04);
+    background-image: -o-linear-gradient(top, #ffd65e, #febf04);
+    background-image: linear-gradient(to bottom, #ffd65e, #febf04);
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffd65e, endColorstr=#febf04);
+}
+
+.SignUp form button:hover {
+    border:1px solid #f7b800;
+    background-color: #ffc92b; 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc92b), to(#ce9a01));
+    background-image: -webkit-linear-gradient(top, #ffc92b, #ce9a01);
+    background-image: -moz-linear-gradient(top, #ffc92b, #ce9a01);
+    background-image: -ms-linear-gradient(top, #ffc92b, #ce9a01);
+    background-image: -o-linear-gradient(top, #ffc92b, #ce9a01);
+    background-image: linear-gradient(to bottom, #ffc92b, #ce9a01);
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc92b, endColorstr=#ce9a01);
+}
+
+.Signup_CTA {
+    margin-bottom: .5rem;
+}
+
