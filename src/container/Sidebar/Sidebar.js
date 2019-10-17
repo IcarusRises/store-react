@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
+import NavigationItem from '../../component/NavigationItems/NavigationItem/NavigationItem';
 import styles from './Sidebar.module.css';
 
 class Sidebar extends Component {
@@ -20,7 +20,7 @@ class Sidebar extends Component {
     }
 
     renderLinks = (laptop) => {
-        return <NavigationItem link={`/laptops/${laptop.brand}`}>{laptop.brand}</NavigationItem>
+        return <NavigationItem link={`/laptops/brand/${laptop.brand}`}>{laptop.brand}</NavigationItem>
     }
 
     render(
@@ -29,7 +29,8 @@ class Sidebar extends Component {
         console.log(this.state.laptop);
         return(
             <div className={styles.Sidebar_Container}>
-                <ul className={styles.Sidebar}>
+                <ul className={`${styles.Sidebar} ${styles.Sidebar_Slide}`}>
+                    <NavigationItem link={'/laptops/brand'}>Brands</NavigationItem>
                     {
                         this.state.laptop.sort((a,b) => a.brand > b.brand).map(link => this.renderLinks(link))
                     }
