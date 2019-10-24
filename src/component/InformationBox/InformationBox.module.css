@@ -1,0 +1,59 @@
+/* INFORMATION BOXES */
+.Purchase_Info_Box_Container:first-of-type {
+    margin-top: 50px;
+}
+
+.Purchase_Info_Box_Container {
+    padding-left: 10px;
+}
+
+.Purchase_Info_Box {
+    height: 150px;
+    background-color: var(--light-grey);
+    padding:20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.Purchase_Info_Box_Ribbon {
+    margin: 0 -20px 0 -30px;
+}
+
+.Purchase_Info_Box_Title {
+    height: 2.5rem;
+    background-color: blue;
+    color: var(--white);
+    padding: 7px 5px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+.Purchase_Info_Box_Title_Inner {
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+.Purchase_Info_Box_Paragraph {
+    font-size: .8rem;
+}
+
+.Purchase_Info_Box_Icon {
+    font-size: 1.2rem;
+    position: absolute;
+    transform: translate(20%, 10%);;
+
+}
+
+.Purchase_Info_Box_Fold {
+    width: 0;
+    height: 0;
+    border-top: 0;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--dark-blue);
+}
+
+.Purchase_Info_Box_Info {
+    padding: 1rem;
+}
