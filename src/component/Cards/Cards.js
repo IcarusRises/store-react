@@ -10,7 +10,7 @@ const cards = (props) => (
                     {props.brand}
             </p>
             <div className={styles.Image}>
-                <img className={styles.CardImage} src={props.image} alt="test image"/>
+                <img src={props.image} alt={`${props.brand}_${props.name}`}/>
             </div>
             <p className={styles.Name}>
                 {props.name}
@@ -25,7 +25,7 @@ const cards = (props) => (
                     </p>
                 </div>
                 <div className={styles.Card_Infobox_Button_Container}>
-                    <Link to={"/purchase"}>
+                    <Link to={"/laptops/purchase/" + props.id}>
                         <button className={styles.Card_Infobox_Button}>
                             Purchase
                         </button>
