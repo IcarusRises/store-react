@@ -1,7 +1,4 @@
-.row{
-    display: flex;
-    flex-direction: row;
-}
+
 
 .Laptop_Slider {
     grid-area: var(--laptop-slider);
@@ -9,31 +6,6 @@
     justify-self: center;
 }
 
-.center{
-    justify-content: space-around;
-}
-
-.Laptop_Cart_Box {
-    grid-area: var(--laptop-pricebox);
-    justify-self: center;
-}
-
-.Laptop_Tabs {
-    grid-area: var(--laptop-tabs);
-    display: flex;
-    justify-self: center;
-}
-
-.Laptop_Labels {
-    grid-area: var(--laptop-labels);
-    width: 300px;
-    justify-self: center;
-    margin-top: 2rem;
-}
-
-.Laptop_Cart_Box_Prices {
-    display: inline;
-}
 
 .laptop{
     width: 20%;
@@ -47,7 +19,7 @@
     margin-top: 2rem;
     background-color: var(--light-grey);
     width: 400px;
-    height: 260px;
+    height: 251px;
     border: 1px solid var(--dark-grey);
     list-style: none;
 }
@@ -71,31 +43,23 @@
     padding: 15px;
 }
 
-.box_original{
-    font-size: .8rem;
+
+
+/* Order Box */
+.Laptop_Order_Container{
+    background-color: white;
+    margin-top: 1px;
+    padding: 10px;
 }
 
-.box_original span{
-    text-decoration: line-through;
+.Laptop_Cart_Box {
+    grid-area: var(--laptop-pricebox);
+    justify-self: center;
 }
 
-.box_savings{
-    width: 30%;
-    margin: .3rem 0;
-    padding: 5px;
-    color: white;
-    background-color: red;
-    font-weight: 600;
-}
-
-.box_price{
-    font-size: 2rem;
-    font-weight: 600;
-    align-content: flex-end;
-}
-
-.button_cart{
-    background-color: var(--light-blue);
+.Laptop_Order_Purchase_Button{
+    background-color: var(--blue);
+    background-image: var(--blue-gradient);
     border: none;
     color: white;
     padding: 15px 20px;
@@ -103,53 +67,59 @@
     cursor: pointer; 
 }
 
-.button_cart:hover{
-    background-color: var(--blue);
+.Laptop_Order_Purchase_Button:hover{
+    background-color: var(--dark-blue);
+    background-image: var(--blue-reverse-gradient);
 }
 
-.box_buttons_container{
-    background-color: white;
-    margin-top: 1px;
-    padding: 10px;
+.Laptop_Purchase_Button a{
+    text-decoration: none;
 }
 
-.box_buttons_inline{
-    display: inline;
+.Laptop_Purchase_Original{
+    font-size: 1rem;
 }
 
-.number{
-    padding: 5px 10px;
-    width: 15%;
-    height: 48px;
-    border-radius: 0;
-    border: 1px solid grey;
+.Laptop_Purchase_Original span{
+    font-size: 1rem;
+    text-decoration: line-through;
 }
 
-.number_button_add{
-    margin-right: 10px;
-    width: 15%;
-    height: 48px;
-    border: none;
+.Laptop_Purchase_Savings{
+    width: 40%;
+    margin: .3rem 0;
+    font-size: 1rem;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    font-weight: 600;
 }
 
-.number_button_subtract{
-    width: 15%;
-    height: 48px;
-    border: none;
+.Laptop_Purchase_Price{
+    align-self: center;
+    font-size: 1.3rem;
 }
 
-.box_buttons_inline input::-webkit-outer-spin-button,
-.box_buttons_inline input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+/* Tabs */
+.Laptop_Tabs {
+    grid-area: var(--laptop-tabs);
+    display: flex;
+    justify-self: center;
 }
 
-.box_buttons_inline input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+.Laptop_Labels {
+    grid-area: var(--laptop-labels);
+    width: 300px;
+    justify-self: center;
+    margin-top: 2rem;
 }
 
-.button_collapse{
-    width: 700px;
-    padding: 20px;
+/* ETC */
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.center{
+    justify-content: space-around;
 }
