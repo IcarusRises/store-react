@@ -1,5 +1,33 @@
+/* GRID AREA */
+
+.Store_Area_A {
+    grid-area: a;
+}
+
+.Store_Area_B {
+    grid-area: b;
+}
+
+.Store_Area_C {
+    grid-area: c;
+}
+
+.Store_Area_D {
+    grid-area: d;
+}
+
+/* Store */
+
 .Store_Container {
-    grid-area: var(--grid-cards);
+    margin: 1rem;
+}
+
+.Store_Empty_Area_C {
+    width: 200px;
+    height: 481px;
+    grid-area: var(--store-empty-area-c);
+    background-color: var(--sider);
+    background-image: var(--sider-gradient);
 }
 
 .Store_Empty_Area_E {
@@ -8,10 +36,27 @@
     width: 0;
 }
 
+.Store_Laptops_Title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: .2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-image: var(--blue-gradient);
+    color: white;
+}
+
 .Store {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     justify-content: space-evenly;
+    border: 1px solid var(--grey);
     margin-top: 2rem;
     margin-bottom: .8rem;
+    padding-bottom: 1rem;
+}
+
+.Store_Border_Bottom:not(:last-child) {
+    border-bottom: 1px solid var(--grey);
 }
