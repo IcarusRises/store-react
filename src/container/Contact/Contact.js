@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {Redirect} from 'react-router-dom';
 import axios from 'axios';
 import BreadCrumbs from '../../component/BreadCrumbs/BreadCrumbs';
 import styles from './Contact.module.css';
@@ -18,6 +19,19 @@ class Contact extends Component {
             comment: {
                 value: ''
             }
+        },
+        redirect: false,
+    }
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    };
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/contact/thankyou'/>
         }
     }
 
@@ -46,18 +60,15 @@ class Contact extends Component {
                 comment: this.state.form.comment.value
             }
 
-        console.log(JSON.stringify(form));
-        // const test = 'test';
-        // axios.post('http://localhost:3001/contact', form)
-        // .then(res => console.log(res.data))
-        // .then((response)=>{
-        //     if (test === 'success'){
-        //         alert("Message Sent."); 
-        //         this.resetForm()
-        //     }else if(response.data.msg === 'fail'){
-        //         alert("Message failed to send.")
-        //     }
-        // })
+        axios.post('http://localhost:3001/contact', form)
+        .then((res)=>{
+            if (res.data.msg === 'success'){
+                this.setRedirect()
+            }else if(res.data === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+        .catch(err => console.log(err))
     }
 
     render(
@@ -108,6 +119,7 @@ class Contact extends Component {
                                 <textarea type="text" name='comment' placeholder="Comment" className={`${styles.Contact_Form_Input}`} onChange={this.inputHandler}/>
                             </label>
                         </div>
+                        {this.renderRedirect()}
                         <div className={`${styles.Center}`}>
                             <button type="submit" className={styles.Contact_Form_Button}>Submit</button>
                         </div>
