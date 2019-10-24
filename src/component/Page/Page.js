@@ -6,6 +6,8 @@ import AuthorizedNavBar from '../AuthorizedNavBar/AuthorizedNavBar';
 import Toolbar from '../Header/Toolbar/Toolbar';
 import Footer from '../Footer/Footer';
 // Pages
+import PurchaseThankYou from '../PurchaseThankYou/PurchaseThankYou';
+import ContactThankYou from '../ContactThankYou/ContactThankYou';
 import Purchase from '../../container/Purchase/Purchase';
 import LaptopForm from '../../container/Form/LaptopForm';
 import Store from '../Store/Store';
@@ -30,10 +32,12 @@ const page = (props) => {
             {authVerified}
             <Switch>
                 <Route exact path="/" component={Store}/>
-                <Route path='/purchase' component={Purchase}/>
+                <Route path='purchase/thankyou' component={PurchaseThankYou} />
+                <Route path='/laptops/purchase/:id' component={Purchase}/>
                 <Route path="/add" component={LaptopForm}/>
                 <Route path='/laptops/brand/:brand' component={Brands}/>
-                <Route path="/contact" component={Contact}/>
+                <Route path='/contact/thankyou' component={ContactThankYou}/>
+                <Route path="/contact" exact component={Contact}/>
                 <Route path='/laptops/brand' exact component={BrandsPage}/>
                 <Route path="/laptops/:id" exact component={Laptop}/>
                 <Route path='/laptops/edit/:id' component={EditLaptop}/>
