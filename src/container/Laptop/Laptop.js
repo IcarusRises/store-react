@@ -97,9 +97,11 @@ class Laptop extends Component{
                         <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_add}`}>
                             <FontAwesomeIcon icon="plus" />
                         </button>
-                        <button className={`${styles.button_cart} ${styles.box_buttons_inline}`}>
-                            <FontAwesomeIcon icon="shopping-cart"/> Add to Cart
-                        </button>
+                        <Link to={'/laptops/purchase/' + this.props.match.params.id}>
+                            <button className={`${styles.button_cart} ${styles.box_buttons_inline}`}>
+                                <FontAwesomeIcon icon="shopping-cart"/> Purchase
+                            </button>
+                        </Link>
                     </div>
                     {authVerified}
                 </div>
