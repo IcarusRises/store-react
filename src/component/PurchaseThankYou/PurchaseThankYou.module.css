@@ -1,0 +1,23 @@
+/* GRID */
+
+.PurchaseThankYou_Area_A {
+    grid-area: a;
+    width: 200px;
+}
+
+.PurchaseThankYou_Area_B {
+    grid-area: b;
+}
+
+.PurchaseThankYou_Area_C {
+    grid-area: c;
+    width: 200px;
+}
+
+.PurchaseThankYou_Area_D {
+    grid-area: d;
+}
+
+.PurchaseThankYou_Area_E {
+    grid-area: e;
+}
