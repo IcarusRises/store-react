@@ -7,7 +7,7 @@ import styles from './Store.module.css';
 
 const store = () => (
     <Fragment>
-        <div className={styles.Store_Empty_Area_E}>
+        <div className={`${styles.Store_Area_E} ${styles.Store_Empty_Area_E}`}>
 
         </div>
         <Sidebar/>
@@ -17,10 +17,10 @@ const store = () => (
             secondImage={image1}
             thirdImage={image1}
         />
-        <div className={styles.Store_Empty_Area_C}>
+        <div className={`${styles.Store_Area_C} ${styles.Store_Empty_Area_C}`}>
 
         </div>
-        <div className={styles.Store_Container}>
+        <div className={`${styles.Store_Area_D} ${styles.Store_Container}`}>
             <div className={styles.Store_Laptops_Title}>
                 <p>Laptops</p>
             </div>
