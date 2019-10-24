@@ -2,28 +2,196 @@
 
 .Purchase_Area_A {
     grid-area: a;
+    width: 300px;
+    justify-self: center;
 }
 
 .Purchase_Area_B {
     grid-area: b;
+    justify-self: center;
 }
 
 .Purchase_Area_C {
+    width: 400px;
     grid-area: c;
-    width: 200px;
+    justify-self: center;
 }
 
 .Purchase_Area_D {
     grid-area: var(--grid-cards);
-    margin: 1rem;
+    margin-top: 4rem;
 }
 
 .Purchase_Area_E {
     grid-area: var(--grid-breadcrumbs);
 }
 
-/* Purchase */
+/* PURCHASE SUMMARY */
 
-.Purchase_Form {
-    background-color: var(--blue);
+.Purchase_Order_Summary_Container {
+    padding: 5px;
+    margin-top: 50px;
+    border: 1px solid var(--black);
+    background-color: var(--light-grey);
 }
+
+.Purchase_Order_Title {
+    padding: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1px;
+    background-color: var(--white);
+}
+
+.Purchase_Order_P {
+    padding: 10px;
+    margin-bottom: 1px;
+    background-color: var(--white);
+}
+
+.Purchase_Order_Total {
+    font-size: 1.3rem;
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* PURCHASE FORM*/
+
+form input {
+    margin: 0;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.Purchase_Form_Container {
+    padding: 5px;
+    background-color: var(--light-grey);
+    margin-top: 50px;
+    border: 1px solid var(--black);
+}
+
+.Purchase_Form_Title {
+    color: var(--dark-grey);
+    background-color: var(--white);
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.Purchase_Form_Input_Container {
+    padding: 10px;
+    background-color: var(--white);
+    
+}
+
+.Purchase_Form_Input {
+    margin: 0 auto;
+    width: 80%;
+    background-color: transparent;
+    border: 1px solid var(--black);
+    border-radius: 0;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    outline: 0;
+}
+
+.Purchase_Form_Input:focus {
+    border: 1px solid var(--grey);
+}
+
+.Purchase_Selection {
+    width: 80%;
+    height: 2.5em;
+    border: 2px solid var(--white);
+    margin-bottom: 15px;
+}
+
+.Purchase_Form_Button_Container {
+    margin-top: 1px;
+    padding: 10px;
+    background-color: var(--white);
+}
+
+.Purchase_Form_Button {
+    margin: 0 auto;
+    width:50%;
+    background-color: var(--blue);
+    background-image: var(--blue-gradient);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1.55rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    font-weight: 700px;
+}
+
+.Purchase_Form_Button:hover {
+    background-color: var(--dark-blue);
+    background-image: var(--blue-reverse-gradient);
+}
+
+.Purchase_Thank_You {
+    color: var(--white);
+}
+
+.Purchase_Thank_You_Container {
+    margin-top: 10rem;
+    width: 100%;
+}
+
+/* LAPTOP CONTAINER AND INFORMATION */
+
+.Purchase_Laptop_Container {
+    height: 500px;
+    width: 500px;
+    margin: 1rem;
+    border: 1px solid var(--black);
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.Purchase_Laptop_Header {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+}
+
+.Purchase_Laptop_Name {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+}
+
+.Purchase_Laptop_Image_Container {
+    padding-top: 1rem;
+    width: 500px;
+    text-align: center;
+}
+
+.Purchase_Laptop_Image {
+    width: 300px;
+    height: auto;
+}
+
+/* OTHERS */
+.Center{
+    text-align: center;
+}
+
+.Text_Margin {
+    margin-bottom: 5px;
+}
+
