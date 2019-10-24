@@ -74,34 +74,30 @@ class Laptop extends Component{
                     <p className={styles.box_sold}>Sold and Shipped By: <span>Linh Cell</span></p>
                     <div className={styles.Laptop_Cart_Box_Prices}>
                         <ul className={styles.box_list}>
-                            <li className={styles.box_original}>
-                                original <span>${this.state.laptop.original}</span>
+                            <li className={styles.Laptop_Purchase_Original}>
+                                Original: <span>${this.state.laptop.original}</span>
                             </li>
-                            <li className={styles.box_savings}>
-                                Save -{this.state.laptop.savings}
+                            <li className={styles.Laptop_Purchase_Savings}>
+                                Savings: ${this.state.laptop.savings}
+                            </li>
+                            <li className={styles.Laptop_Purchase_Price}>
+                                Price: ${this.state.laptop.price}
                             </li>
                         </ul>
-                        <div className={styles.box_price}>
+                    </div>
+                    <div className={styles.Laptop_Order_Container}>
+                        <div >
                             <p>
-                                ${this.state.laptop.price}
+                               
                             </p>
                         </div>
-                    </div>
-                    <div className={styles.box_buttons_container}>
-                        <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_subtract}`}>
-                            <FontAwesomeIcon icon="minus" />
-                        </button>
-                        <div className={styles.box_buttons_inline}>
-                            <input type="number" className={styles.number}/>
+                        <div className={styles.Laptop_Purchase_Button}>
+                            <Link to={'/laptops/purchase/' + this.props.match.params.id}>
+                                <button className={`${styles.Laptop_Order_Purchase_Button}`}>
+                                    <FontAwesomeIcon icon="shopping-cart"/> Purchase
+                                </button>
+                            </Link>
                         </div>
-                        <button className={`${styles.button_pointer} ${styles.box_buttons_inline} ${styles.number_button_add}`}>
-                            <FontAwesomeIcon icon="plus" />
-                        </button>
-                        <Link to={'/laptops/purchase/' + this.props.match.params.id}>
-                            <button className={`${styles.button_cart} ${styles.box_buttons_inline}`}>
-                                <FontAwesomeIcon icon="shopping-cart"/> Purchase
-                            </button>
-                        </Link>
                     </div>
                     {authVerified}
                 </div>
